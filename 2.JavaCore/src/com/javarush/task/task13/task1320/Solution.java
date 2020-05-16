@@ -7,10 +7,12 @@ Neo
 public class Solution {
     public static void main(String[] args) throws Exception {
         System.out.println(Matrix.NEO);
+
     }
 
     static class Matrix {
         public static DBObject NEO = new User().initializeIdAndName(1, "Neo");
+
     }
 
     interface DBObject {
@@ -27,8 +29,10 @@ public class Solution {
         }
 
         @Override
-        public DBObject initializeIdAndName(long id, String name) {
-            return null;
+        public User initializeIdAndName(long id, String name) {
+            this.id=id;
+            this.name=name;
+            return this;
         }
     }
 }
